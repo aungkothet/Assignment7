@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment7</string>
+    <string name="movies">Movies</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buy_tickets">Buy tickets</string>
+    <string name="percentage_str">%1$d\%</string>
+    <string name="imdb">IMDB</string>
+    <string name="rotten_tomato">Rotten Tomato</string>
+    <string name="metacritic">Metacritic</string>
+</resources>
