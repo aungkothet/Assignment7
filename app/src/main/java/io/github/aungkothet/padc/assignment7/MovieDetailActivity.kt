@@ -2,10 +2,10 @@ package io.github.aungkothet.padc.assignment7
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import io.github.aungkothet.padc.assignment7.adapters.CastAndCrewRecyclerAdapter
 import io.github.aungkothet.padc.assignment7.data.vos.CastVo
@@ -31,11 +31,11 @@ class MovieDetailActivity : AppCompatActivity() {
         img_close.setOnClickListener { finish() }
         val gsonMovieString = intent.getStringExtra(IE_MOVIE)
         movieVo = Gson().fromJson(gsonMovieString, MovieVo::class.java)
-        img_movie_banner_detail.setImageDrawable(getDrawable(R.drawable.default_banner))
-//        Glide.with(this).load(movieVo.poster).error(R.drawable.default_banner).into(img_movie_banner_detail)
-        tv_movie_name_detail.text = movieVo.movieName
-        tv_movie_genre_detail.text = "${movieVo.genreString()} 2h"
-        tv_imdb_detail.text = "${movieVo.imdb}"
+//        img_movie_banner_detail.setImageDrawable(getDrawable(R.drawable.default_banner))
+        Glide.with(this).load(movieVo.poster).error(R.drawable.default_banner).into(img_movie_banner_detail)
+        tvMovieName.text = movieVo.movieName
+        tvMovieGenre.text = "${movieVo.genreString()} 2h"
+        tvImdbDetail.text = "${movieVo.imdb}"
         tv_rt_percent_detail.text = "${movieVo.rottenTomato}%"
         tv_metacritic_detail.text = "${movieVo.metaCentric}%"
         tv_movie_desc_detail.text = movieVo.overview

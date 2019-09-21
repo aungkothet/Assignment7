@@ -24,10 +24,8 @@ class MainActivity : AppCompatActivity(), MovieDelegate {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         val adapter = TabPagerAdapter(supportFragmentManager)
-        view_pager.adapter = adapter
-        tab_layout.setupWithViewPager(view_pager)
-
+        viewPager.adapter = adapter
+        tabLayout.setupWithViewPager(viewPager)
     }
-
 
 }

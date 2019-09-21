@@ -14,14 +14,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img_movie_banner_detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/default_banner" />
+                android:layout_alignTop="@id/rlContent"
+                android:layout_alignBottom="@id/rlContent"/>
 
             <RelativeLayout
+                android:id="@+id/rlContent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingBottom="@dimen/margin_medium_2"
@@ -37,7 +39,7 @@
                     android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
                 <TextView
-                    android:id="@+id/tv_movie_name_detail"
+                    android:id="@+id/tvMovieName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/img_close"
@@ -46,10 +48,10 @@
                     android:textSize="@dimen/text_heading_1x" />
 
                 <TextView
-                    android:id="@+id/tv_movie_genre_detail"
+                    android:id="@+id/tvMovieGenre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_movie_name_detail"
+                    android:layout_below="@id/tvMovieName"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextSecondary" />
 
@@ -57,13 +59,13 @@
                     android:id="@+id/layout_numbers_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_movie_genre_detail"
+                    android:layout_below="@id/tvMovieGenre"
                     android:layout_marginTop="@dimen/margin_medium_2"
                     android:orientation="horizontal"
                     android:weightSum="3">
 
                     <TextView
-                        android:id="@+id/tv_imdb_detail"
+                        android:id="@+id/tvImdbDetail"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -149,6 +151,8 @@
                     android:layout_marginStart="@dimen/margin_medium_2"
                     android:layout_marginTop="@dimen/margin_medium"
                     android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:maxLines="3"
+                    android:ellipsize="end"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextSecondary" />
 
