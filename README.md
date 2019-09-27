@@ -36,4 +36,4 @@ UI improvement
  ```
  
  ## Release APK
-Download apk [here](https://github.com/aungkothet/Assignment7/blob/master/app/release/assignment7+8.apk)
+Download apk [here](https://bit.ly/2nN3iMz)
