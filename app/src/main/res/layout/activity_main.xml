@@ -7,7 +7,7 @@
     android:background="@drawable/bg_gradiant"
     android:orientation="vertical"
     android:paddingTop="24dp"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

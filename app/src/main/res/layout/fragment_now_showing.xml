@@ -6,9 +6,9 @@
     android:orientation="vertical"
     tools:context=".fragments.NowShowingFragment">
 
-    <androidx.viewpager.widget.ViewPager
-        android:layout_marginTop="@dimen/margin_medium"
-        android:id="@+id/vp_now_showing"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/fragment_movie" />
 </LinearLayout>

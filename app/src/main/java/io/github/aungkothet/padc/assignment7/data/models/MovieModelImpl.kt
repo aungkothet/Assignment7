@@ -1,12 +1,23 @@
 package io.github.aungkothet.padc.assignment7.data.models
 
-import android.content.Context
 import io.github.aungkothet.padc.assignment7.data.vos.MovieVo
 
-class MovieModelImpl (context: Context):BaseModel(context),MovieModel{
+object MovieModelImpl: BaseModel(),MovieModel{
 
-    override fun getEvents(accessToken:String, onSuccess: (List<MovieVo>) -> Unit, onFailure: (String) -> Unit) {
-        dataAgent.getMovieList(accessToken,onSuccess, onFailure)
+    override fun getMovies(accessToken:String, onSuccess: (List<MovieVo>) -> Unit, onFailure: (String) -> Unit) {
+        val moviesFromDB = dataBase.movieDao().getAllMovies()
+        if (moviesFromDB.isNotEmpty()) {
+            onSuccess(moviesFromDB)
+        } else {
+            dataAgent.getMovieList(accessToken, {
+                dataBase.movieDao().insertMovies(it)
+                onSuccess(it)
+            }, onFailure)
+        }
+    }
+
+    override fun getMovieById(movieId: Int): MovieVo {
+        return dataBase.movieDao().getMovieById(movieId)
     }
 
 }

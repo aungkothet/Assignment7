@@ -6,3 +6,4 @@ const val GET_ALL_MOVIES = "$BASE_URL/get-all-movies"
 const val CODE_RESPONSE_OK = 200
 const val EM_NULL_RESPONSE = "Please check the Internet Connection!."
 const val ACCESS_TOKEN = "fagsfdagsfjasjfhJFJDSJFJFJHFJhajhfjasdfa"
+const val DB_NAME = "MovieDB"
