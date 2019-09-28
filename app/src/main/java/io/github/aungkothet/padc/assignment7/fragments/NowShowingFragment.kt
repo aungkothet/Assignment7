@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import io.github.aungkothet.padc.assignment7.R
 import io.github.aungkothet.padc.assignment7.adapters.MoviesRecyclerAdapter
 import io.github.aungkothet.padc.assignment7.data.models.MovieModelImpl
@@ -30,6 +31,7 @@ class NowShowingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_now_showing, container, false)
         val moviesRecyclerAdapter = MoviesRecyclerAdapter(delegate)
@@ -38,7 +40,10 @@ class NowShowingFragment : Fragment() {
         }) {
             delegate.showNnackBar(it)
         }
+        val pagerSnapHelper = PagerSnapHelper()
+        pagerSnapHelper.attachToRecyclerView(view.movieRecyclerView)
         view.movieRecyclerView.apply {
+            setPadding(130,0,130,0)
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = moviesRecyclerAdapter
