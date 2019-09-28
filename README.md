@@ -9,6 +9,8 @@ Focused on
 - Retrofit Network Call
 - Room Database (store and retrieve data )
 - Used TypeConverter
+- paging effect on recycler view
+- android:clipToPadding="false" in recycler view to show the next item portion.
 
 UI improvement
 - Changed From FragmentPager to Recycler View
