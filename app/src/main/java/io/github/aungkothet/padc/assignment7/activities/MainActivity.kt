@@ -26,6 +26,7 @@ class MainActivity : BaseActivity(), MovieDelegate {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        title=""
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         val adapter = TabPagerAdapter(supportFragmentManager)
