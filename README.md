@@ -36,6 +36,11 @@ UI improvement
     implementation "android.arch.persistence.room:runtime:1.1.1"
     kapt "android.arch.persistence.room:compiler:1.1.1"
  ```
- 
+ ## Screenshots 
+
+![Screenshot](https://github.com/aungkothet/bookstore/blob/master/assignment7_ss_1.png)
+![Screenshot](https://github.com/aungkothet/bookstore/blob/master/assignment7_ss_2.png)
+
+
  ## Release APK
 Download apk [here](https://bit.ly/2nN3iMz)
